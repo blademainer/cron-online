@@ -1,164 +1,527 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0050)file:///D:/workspace_JavaEE/cron-online/index.html -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-<link rel="shortcut icon" href="file:///D:/workspace_JavaEE/cron-online/favicon.ico">
-<title>在线Cron表达式生成器</title>
-<meta name="description" content="通过这个生成器,您可以在线生成任务调度比如Quartz的Cron表达式">
-<meta name="keywords" content="cron creater,generate Cron Expression,Cron Expression online,Quartz Cron Expresssion,cron在线生成工具">
-<link rel="stylesheet" type="text/css" href="./index_files/style.css">
-<link rel="stylesheet" type="text/css" href="./index_files/easyui.css">
-<link rel="stylesheet" type="text/css" href="./index_files/icon.css">
-<script type="text/javascript" src="./index_files/jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="./index_files/ZeroClipboard.js"></script>
-<script type="text/javascript" src="./index_files/jquery.easyui.min.js"></script>
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0039)http://www.hahuachou.com/cron/index.htm -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+   <TITLE>Be Cron - 在线Cron表达式生成器</TITLE>	 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META name="description" content="通过这个生成器,您可以在线生成任务调度比如Quartz的Cron表达式,对Quartz Cron 表达式的可视化双向解析和生成.">
+	 
+<META name="keywords" content="cron creater,generate Cron Expression,Cron Expression online,Quartz Cron Expresssion,cron在线生成工具">
+	 
+<META name="baidu-tc-cerfication" content="52031c379393b942ce0d59195791f366">    
+ <LINK href="a_files/easyui.css" rel="stylesheet" type="text/css">     <LINK 
+href="a_files/icon.css" rel="stylesheet" type="text/css">     <LINK href="a_files/icon(1).css" 
+rel="stylesheet" type="text/css">     
+<SCRIPT src="a_files/jquery-1.6.2.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="a_files/jquery.easyui.min.js" type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="a_files/cron.js" type="text/javascript"></SCRIPT>
+     
+<STYLE type="text/css">
+        .line
+        {
+            height: 25px;
+            line-height: 25px;
+            margin: 3px;
+        }
+        .imp
+        {
+            padding-left: 25px;
+        }
+        .col
+        {
+            width: 95px;
+        }
+    </STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.16412"></HEAD> 
+<BODY>
+<CENTER>
+<DIV class="easyui-layout" style="border-radius: 5px; border: 1px solid rgb(202, 196, 196); border-image: none; width: 830px; height: 540px;">
+<DIV style="height: 100%;">
+<DIV class="easyui-tabs" data-options="fit:true,border:false">
+<DIV title="秒">
+<DIV class="line"><INPUT name="second" onclick="everyTime(this)" type="radio">   
+                          每秒 允许的通配符[, - * /]</DIV>
+<DIV class="line"><INPUT name="second" onclick="cycle(this)" type="radio">       
+                      周期从                             <INPUT class="numberspinner" id="secondStart_0" style="width: 60px;" value="1" data-options="min:1,max:58"> 
+                           -                             <INPUT class="numberspinner" id="secondEnd_0" style="width: 60px;" value="2" data-options="min:2,max:59"> 
+                            秒</DIV>
+<DIV class="line"><INPUT name="second" onclick="startOn(this)" type="radio">     
+                       从                             <INPUT class="numberspinner" id="secondStart_1" style="width: 60px;" value="0" data-options="min:0,max:59"> 
+                            秒开始,每                             <INPUT class="numberspinner" id="secondEnd_1" style="width: 60px;" value="1" data-options="min:1,max:59"> 
+                            秒执行一次</DIV>
+<DIV class="line"><INPUT name="second" id="sencond_appoint" type="radio">        
+                    指定</DIV>
+<DIV class="imp secondList"><INPUT type="checkbox" value="1">01                  
+           <INPUT type="checkbox" value="2">02                             
+<INPUT type="checkbox" value="3">03                             <INPUT type="checkbox" 
+value="4">04                             <INPUT type="checkbox" value="5">05     
+                        <INPUT type="checkbox" value="6">06                      
+       <INPUT type="checkbox" value="7">07                             <INPUT 
+type="checkbox" value="8">08                             <INPUT type="checkbox" 
+value="9">09                             <INPUT type="checkbox" 
+value="10">10</DIV>
+<DIV class="imp secondList"><INPUT type="checkbox" value="11">11                 
+            <INPUT type="checkbox" value="12">12                             
+<INPUT type="checkbox" value="13">13                             <INPUT type="checkbox" 
+value="14">14                             <INPUT type="checkbox" value="15">15   
+                          <INPUT type="checkbox" value="16">16                   
+          <INPUT type="checkbox" value="17">17                             
+<INPUT type="checkbox" value="18">18                             <INPUT type="checkbox" 
+value="19">19                             <INPUT type="checkbox" 
+value="20">20</DIV>
+<DIV class="imp secondList"><INPUT type="checkbox" value="21">21                 
+            <INPUT type="checkbox" value="22">22                             
+<INPUT type="checkbox" value="23">23                             <INPUT type="checkbox" 
+value="24">24                             <INPUT type="checkbox" value="25">25   
+                          <INPUT type="checkbox" value="26">26                   
+          <INPUT type="checkbox" value="27">27                             
+<INPUT type="checkbox" value="28">28                             <INPUT type="checkbox" 
+value="29">29                             <INPUT type="checkbox" 
+value="30">30</DIV>
+<DIV class="imp secondList"><INPUT type="checkbox" value="31">31                 
+            <INPUT type="checkbox" value="32">32                             
+<INPUT type="checkbox" value="33">33                             <INPUT type="checkbox" 
+value="34">34                             <INPUT type="checkbox" value="35">35   
+                          <INPUT type="checkbox" value="36">36                   
+          <INPUT type="checkbox" value="37">37                             
+<INPUT type="checkbox" value="38">38                             <INPUT type="checkbox" 
+value="39">39                             <INPUT type="checkbox" 
+value="40">40</DIV>
+<DIV class="imp secondList"><INPUT type="checkbox" value="41">41                 
+            <INPUT type="checkbox" value="42">42                             
+<INPUT type="checkbox" value="43">43                             <INPUT type="checkbox" 
+value="44">44                             <INPUT type="checkbox" value="45">45   
+                          <INPUT type="checkbox" value="46">46                   
+          <INPUT type="checkbox" value="47">47                             
+<INPUT type="checkbox" value="48">48                             <INPUT type="checkbox" 
+value="49">49                             <INPUT type="checkbox" 
+value="50">50</DIV>
+<DIV class="imp secondList"><INPUT type="checkbox" value="51">51                 
+            <INPUT type="checkbox" value="52">52                             
+<INPUT type="checkbox" value="53">53                             <INPUT type="checkbox" 
+value="54">54                             <INPUT type="checkbox" value="55">55   
+                          <INPUT type="checkbox" value="56">56                   
+          <INPUT type="checkbox" value="57">57                             
+<INPUT type="checkbox" value="58">58                             <INPUT type="checkbox" 
+value="59">59                         </DIV></DIV>
+<DIV title="分钟">
+<DIV class="line"><INPUT name="min" onclick="everyTime(this)" type="radio">      
+                       分钟 允许的通配符[, - * /]</DIV>
+<DIV class="line"><INPUT name="min" onclick="cycle(this)" type="radio">          
+                   周期从                             
+<INPUT class="numberspinner" id="minStart_0" style="width: 60px;" value="1" data-options="min:1,max:58"> 
+                           -                             <INPUT class="numberspinner" id="minEnd_0" style="width: 60px;" value="2" data-options="min:2,max:59"> 
+                            分钟</DIV>
+<DIV class="line"><INPUT name="min" onclick="startOn(this)" type="radio">        
+                    从                             
+<INPUT class="numberspinner" id="minStart_1" style="width: 60px;" value="0" data-options="min:0,max:59"> 
+                            分钟开始,每                             <INPUT class="numberspinner" id="minEnd_1" style="width: 60px;" value="1" data-options="min:1,max:59"> 
+                            分钟执行一次</DIV>
+<DIV class="line"><INPUT name="min" id="min_appoint" type="radio">               
+             指定</DIV>
+<DIV class="imp minList"><INPUT type="checkbox" value="1">01                     
+        <INPUT type="checkbox" value="2">02                             <INPUT 
+type="checkbox" value="3">03                             <INPUT type="checkbox" 
+value="4">04                             <INPUT type="checkbox" value="5">05     
+                        <INPUT type="checkbox" value="6">06                      
+       <INPUT type="checkbox" value="7">07                             <INPUT 
+type="checkbox" value="8">08                             <INPUT type="checkbox" 
+value="9">09                             <INPUT type="checkbox" 
+value="10">10</DIV>
+<DIV class="imp minList"><INPUT type="checkbox" value="11">11                    
+         <INPUT type="checkbox" value="12">12                             <INPUT 
+type="checkbox" value="13">13                             <INPUT type="checkbox" 
+value="14">14                             <INPUT type="checkbox" value="15">15   
+                          <INPUT type="checkbox" value="16">16                   
+          <INPUT type="checkbox" value="17">17                             
+<INPUT type="checkbox" value="18">18                             <INPUT type="checkbox" 
+value="19">19                             <INPUT type="checkbox" 
+value="20">20</DIV>
+<DIV class="imp minList"><INPUT type="checkbox" value="21">21                    
+         <INPUT type="checkbox" value="22">22                             <INPUT 
+type="checkbox" value="23">23                             <INPUT type="checkbox" 
+value="24">24                             <INPUT type="checkbox" value="25">25   
+                          <INPUT type="checkbox" value="26">26                   
+          <INPUT type="checkbox" value="27">27                             
+<INPUT type="checkbox" value="28">28                             <INPUT type="checkbox" 
+value="29">29                             <INPUT type="checkbox" 
+value="30">30</DIV>
+<DIV class="imp minList"><INPUT type="checkbox" value="31">31                    
+         <INPUT type="checkbox" value="32">32                             <INPUT 
+type="checkbox" value="33">33                             <INPUT type="checkbox" 
+value="34">34                             <INPUT type="checkbox" value="35">35   
+                          <INPUT type="checkbox" value="36">36                   
+          <INPUT type="checkbox" value="37">37                             
+<INPUT type="checkbox" value="38">38                             <INPUT type="checkbox" 
+value="39">39                             <INPUT type="checkbox" 
+value="40">40</DIV>
+<DIV class="imp minList"><INPUT type="checkbox" value="41">41                    
+         <INPUT type="checkbox" value="42">42                             <INPUT 
+type="checkbox" value="43">43                             <INPUT type="checkbox" 
+value="44">44                             <INPUT type="checkbox" value="45">45   
+                          <INPUT type="checkbox" value="46">46                   
+          <INPUT type="checkbox" value="47">47                             
+<INPUT type="checkbox" value="48">48                             <INPUT type="checkbox" 
+value="49">49                             <INPUT type="checkbox" 
+value="50">50</DIV>
+<DIV class="imp minList"><INPUT type="checkbox" value="51">51                    
+         <INPUT type="checkbox" value="52">52                             <INPUT 
+type="checkbox" value="53">53                             <INPUT type="checkbox" 
+value="54">54                             <INPUT type="checkbox" value="55">55   
+                          <INPUT type="checkbox" value="56">56                   
+          <INPUT type="checkbox" value="57">57                             
+<INPUT type="checkbox" value="58">58                             <INPUT type="checkbox" 
+value="59">59                         </DIV></DIV>
+<DIV title="小时">
+<DIV class="line"><INPUT name="hour" onclick="everyTime(this)" type="radio">     
+                        小时 允许的通配符[, - * /]</DIV>
+<DIV class="line"><INPUT name="hour" onclick="cycle(this)" type="radio">         
+                    周期从                             
+<INPUT class="numberspinner" id="hourStart_0" style="width: 60px;" value="0" data-options="min:0,max:23"> 
+                           -                             <INPUT class="numberspinner" id="hourEnd_1" style="width: 60px;" value="2" data-options="min:2,max:23"> 
+                            小时</DIV>
+<DIV class="line"><INPUT name="hour" onclick="startOn(this)" type="radio">       
+                     从                             
+<INPUT class="numberspinner" id="hourStart_1" style="width: 60px;" value="0" data-options="min:0,max:23"> 
+                            小时开始,每                             <INPUT class="numberspinner" id="hourEnd_1" style="width: 60px;" value="1" data-options="min:1,max:23"> 
+                            小时执行一次</DIV>
+<DIV class="line"><INPUT name="hour" id="hour_appoint" type="radio">             
+               指定</DIV>
+<DIV class="imp hourList">AM:                             <INPUT type="checkbox" 
+value="0">00                             <INPUT type="checkbox" value="1">01     
+                        <INPUT type="checkbox" value="2">02                      
+       <INPUT type="checkbox" value="3">03                             <INPUT 
+type="checkbox" value="4">04                             <INPUT type="checkbox" 
+value="5">05                             <INPUT type="checkbox" value="6">06     
+                        <INPUT type="checkbox" value="7">07                      
+       <INPUT type="checkbox" value="8">08                             <INPUT 
+type="checkbox" value="9">09                             <INPUT type="checkbox" 
+value="10">10                             <INPUT type="checkbox" value="11">11   
+                      </DIV>
+<DIV class="imp hourList">                            PM:                        
+     <INPUT type="checkbox" value="12">12                             <INPUT 
+type="checkbox" value="13">13                             <INPUT type="checkbox" 
+value="14">14                             <INPUT type="checkbox" value="15">15   
+                          <INPUT type="checkbox" value="16">16                   
+          <INPUT type="checkbox" value="17">17                             
+<INPUT type="checkbox" value="18">18                             <INPUT type="checkbox" 
+value="19">19                             <INPUT type="checkbox" value="20">20   
+                          <INPUT type="checkbox" value="21">21                   
+          <INPUT type="checkbox" value="22">22                             
+<INPUT type="checkbox" value="23">23                         </DIV></DIV>
+<DIV title="日">
+<DIV class="line"><INPUT name="day" onclick="everyTime(this)" type="radio">      
+                       日 允许的通配符[, - * / L W]</DIV>
+<DIV class="line"><INPUT name="day" onclick="unAppoint(this)" type="radio">      
+                       不指定</DIV>
+<DIV class="line"><INPUT name="day" onclick="cycle(this)" type="radio">          
+                  周期从                             
+<INPUT class="numberspinner" id="dayStart_0" style="width: 60px;" value="1" data-options="min:1,max:31"> 
+                           -                             <INPUT class="numberspinner" id="dayEnd_0" style="width: 60px;" value="2" data-options="min:2,max:31"> 
+                            日</DIV>
+<DIV class="line"><INPUT name="day" onclick="startOn(this)" type="radio">        
+                    从                             
+<INPUT class="numberspinner" id="dayStart_1" style="width: 60px;" value="1" data-options="min:1,max:31"> 
+                            日开始,每                             <INPUT class="numberspinner" id="dayEnd_1" style="width: 60px;" value="1" data-options="min:1,max:31"> 
+                            天执行一次</DIV>
+<DIV class="line"><INPUT name="day" onclick="workDay(this)" type="radio">        
+                    每月                             
+<INPUT class="numberspinner" id="dayStart_2" style="width: 60px;" value="1" data-options="min:1,max:31"> 
+                            号最近的那个工作日</DIV>
+<DIV class="line"><INPUT name="day" onclick="lastDay(this)" type="radio">        
+                    本月最后一天</DIV>
+<DIV class="line"><INPUT name="day" id="day_appoint" type="radio">               
+             指定</DIV>
+<DIV class="imp dayList"><INPUT type="checkbox" value="1">1                      
+       <INPUT type="checkbox" value="2">2                             <INPUT 
+type="checkbox" value="3">3                             <INPUT type="checkbox" 
+value="4">4                             <INPUT type="checkbox" value="5">5       
+                      <INPUT type="checkbox" value="6">6                         
+    <INPUT type="checkbox" value="7">7                             <INPUT type="checkbox" 
+value="8">8                             <INPUT type="checkbox" value="9">9       
+                      <INPUT type="checkbox" value="10">10                       
+      <INPUT type="checkbox" value="11">11                             <INPUT 
+type="checkbox" value="12">12                             <INPUT type="checkbox" 
+value="13">13                             <INPUT type="checkbox" value="14">14   
+                          <INPUT type="checkbox" value="15">15                   
+          <INPUT type="checkbox" value="16">16                         </DIV>
+<DIV class="imp dayList"><INPUT type="checkbox" value="17">17                    
+         <INPUT type="checkbox" value="18">18                             <INPUT 
+type="checkbox" value="19">19                             <INPUT type="checkbox" 
+value="20">20                             <INPUT type="checkbox" value="21">21   
+                          <INPUT type="checkbox" value="22">22                   
+          <INPUT type="checkbox" value="23">23                             
+<INPUT type="checkbox" value="24">24                             <INPUT type="checkbox" 
+value="25">25                             <INPUT type="checkbox" value="26">26   
+                          <INPUT type="checkbox" value="27">27                   
+          <INPUT type="checkbox" value="28">28                             
+<INPUT type="checkbox" value="29">29                             <INPUT type="checkbox" 
+value="30">30                             <INPUT type="checkbox" value="31">31   
+                      </DIV></DIV>
+<DIV title="月">
+<DIV class="line"><INPUT name="mouth" onclick="everyTime(this)" type="radio">    
+                         月 允许的通配符[, - * /]</DIV>
+<DIV class="line"><INPUT name="mouth" onclick="unAppoint(this)" type="radio">    
+                         不指定</DIV>
+<DIV class="line"><INPUT name="mouth" onclick="cycle(this)" type="radio">        
+                    周期从                             
+<INPUT class="numberspinner" id="mouthStart_0" style="width: 60px;" value="1" data-options="min:1,max:12"> 
+                           -                             <INPUT class="numberspinner" id="mouthEnd_0" style="width: 60px;" value="2" data-options="min:2,max:12"> 
+                            月</DIV>
+<DIV class="line"><INPUT name="mouth" onclick="startOn(this)" type="radio">      
+                      从                             
+<INPUT class="numberspinner" id="mouthStart_1" style="width: 60px;" value="1" data-options="min:1,max:12"> 
+                            日开始,每                             <INPUT class="numberspinner" id="mouthEnd_1" style="width: 60px;" value="1" data-options="min:1,max:12"> 
+                            月执行一次</DIV>
+<DIV class="line"><INPUT name="mouth" id="mouth_appoint" type="radio">           
+                 指定</DIV>
+<DIV class="imp mouthList"><INPUT type="checkbox" value="1">1                    
+         <INPUT type="checkbox" value="2">2                             <INPUT 
+type="checkbox" value="3">3                             <INPUT type="checkbox" 
+value="4">4                             <INPUT type="checkbox" value="5">5       
+                      <INPUT type="checkbox" value="6">6                         
+    <INPUT type="checkbox" value="7">7                             <INPUT type="checkbox" 
+value="8">8                             <INPUT type="checkbox" value="9">9       
+                      <INPUT type="checkbox" value="10">10                       
+      <INPUT type="checkbox" value="11">11                             <INPUT 
+type="checkbox" value="12">12                         </DIV></DIV>
+<DIV title="周">
+<DIV class="line"><INPUT name="week" onclick="everyTime(this)" type="radio">     
+                        周 允许的通配符[, - * / L #]</DIV>
+<DIV class="line"><INPUT name="week" onclick="unAppoint(this)" type="radio">     
+                        不指定</DIV>
+<DIV class="line"><INPUT name="week" onclick="startOn(this)" type="radio">       
+                     周期 从星期<INPUT class="numberspinner" id="weekStart_0" style="width: 60px;" value="1" data-options="min:1,max:7"> 
+                           -                             <INPUT class="numberspinner" id="weekEnd_0" style="width: 60px;" value="2" data-options="min:2,max:7"></DIV>
+<DIV class="line"><INPUT name="week" onclick="weekOfDay(this)" type="radio">     
+                        第<INPUT class="numberspinner" id="weekStart_1" style="width: 60px;" value="1" data-options="min:1,max:4"> 
+                            周 
+的星期<INPUT class="numberspinner" id="weekEnd_1" style="width: 60px;" value="1" data-options="min:1,max:7"></DIV>
+<DIV class="line"><INPUT name="week" onclick="lastWeek(this)" type="radio">      
+                       
+本月最后一个星期<INPUT class="numberspinner" id="weekStart_2" style="width: 60px;" value="1" data-options="min:1,max:7"></DIV>
+<DIV class="line"><INPUT name="week" id="week_appoint" type="radio">             
+                指定</DIV>
+<DIV class="imp weekList"><INPUT type="checkbox" value="1">1                     
+        <INPUT type="checkbox" value="2">2                             <INPUT 
+type="checkbox" value="3">3                             <INPUT type="checkbox" 
+value="4">4                             <INPUT type="checkbox" value="5">5       
+                      <INPUT type="checkbox" value="6">6                         
+    <INPUT type="checkbox" value="7">7                         </DIV></DIV>
+<DIV title="年">
+<DIV class="line"><INPUT name="year" onclick="unAppoint(this)" type="radio">     
+                        不指定 允许的通配符[, - * /] 非必填</DIV>
+<DIV class="line"><INPUT name="year" onclick="everyTime(this)" type="radio">     
+                       每年</DIV>
+<DIV class="line"><INPUT name="year" onclick="cycle(this)" type="radio">周期 从     
+                        <INPUT class="numberspinner" id="yearStart_0" style="width: 90px;" value="2013" data-options="min:2013,max:3000"> 
+                           -                             <INPUT class="numberspinner" id="yearEnd_0" style="width: 90px;" value="2014" data-options="min:2014,max:3000"></DIV></DIV></DIV></DIV>
+<DIV style="height: 230px;" data-options="region:'south',border:false">
+<FIELDSET style="border-radius: 3px; height: 116px;"><LEGEND>表达式</LEGEND>        
+             
+<TABLE style="height: 100px;">
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD align="center">                                    秒                   
+                    </TD>
+    <TD align="center">                                    分钟                  
+                     </TD>
+    <TD align="center">                                    小时                  
+                     </TD>
+    <TD align="center">                                    日                   
+                    </TD>
+    <TD align="center">                                    月<BR></TD>
+    <TD align="center">                                    星期                  
+                     </TD>
+    <TD align="center">                                    年                   
+                    </TD></TR>
+  <TR>
+    <TD>                                    表达式字段:                             
+          </TD>
+    <TD><INPUT name="v_second" class="col" type="text" readonly="readonly" value="*"> 
+                                      </TD>
+    <TD><INPUT name="v_min" class="col" type="text" readonly="readonly" value="*"> 
+                                      </TD>
+    <TD><INPUT name="v_hour" class="col" type="text" readonly="readonly" value="*"> 
+                                      </TD>
+    <TD><INPUT name="v_day" class="col" type="text" readonly="readonly" value="*"> 
+                                      </TD>
+    <TD><INPUT name="v_mouth" class="col" type="text" readonly="readonly" value="*"> 
+                                      </TD>
+    <TD><INPUT name="v_week" class="col" type="text" readonly="readonly" value="?"> 
+                                      </TD>
+    <TD><INPUT name="v_year" class="col" type="text" readonly="readonly">      
+                                 </TD></TR>
+  <TR>
+    <TD>Cron 表达式:</TD>
+    <TD colspan="6"><INPUT name="cron" id="cron" style="width: 100%;" type="text" value="* * * * * ?"></TD>
+    <TD><INPUT id="btnFan" onclick="btnFan()" type="button" value="反解析到UI "></TD></TR></TBODY></TABLE></FIELDSET>
+<DIV style="text-align: center; margin-top: 5px;">
+<SCRIPT type="text/javascript">
+                        /*killIe*/
+                        $.parser.parse($("body"));
+                        var cpro_id = "u1331261";
 
-<script language="JavaScript">
-	var clip = null;
-function init() {
-	clip = new ZeroClipboard.Client();
-	clip.setHandCursor(true);
-	clip.addEventListener('load', my_load);
-	clip.addEventListener('mouseOver', my_mouse_over);
-	clip.addEventListener('complete', my_complete);
-	clip.glue('btnCopy');
-}
-function my_load(client) {
-	debugstr("Flash movie loaded and ready.");
-}
-function my_mouse_over(client) {
-alert(4546546);
-	// we can cheat a little here -- update the text on mouse over
-	clip.setText($('#txtCron').val());
-}
-function my_complete(client, text) {
-	debugstr("Copied text to clipboard: " + text);
-}
-function debugstr(msg) {
-	var copyVal = $('#txtCron').val();
-	alert(copyVal);
-	
-		var p = document.createElement('p');
-		p.innerHTML = msg;
-		$("#copysuccess").text("已复制到剪贴板");
-		$('#d_debug').appendTo(p);
-}	
-</script>
-</head>
-<body onload="init()">
-<div id="cronContainer">
-  <div id="tt">
-    <h3>在线Cron表达式生成器</h3>
-  </div>
-  <div id="cChoice">
-    <div class="easyui-tabs tabs-container" style="width: 700px; height: 250px;"><div class="tabs-header" style="width: 698px;"><div class="tabs-scroller-left" style="display: none;"></div><div class="tabs-scroller-right" style="display: none;"></div><div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 698px;"><ul class="tabs"><li class="tabs-selected"><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">分钟</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">小时</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">日</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">月</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">星期</span><span class="tabs-icon"></span></a></li></ul></div></div><div class="tabs-panels" style="height: 219px; width: 698px;">
-      <div class="panel" style="display: block; width: 698px;"><div title="" style="padding: 10px; width: 678px; height: 199px;" class="panel-body panel-body-noheader panel-body-noborder">
-        <ul>
-          <li>
-            <input type="radio" name="rMin" checked="checked" value="*">
-            周期 从
-            <span class="spinner" style="width: 78px; height: 20px;"><input class="easyui-numberspinner numberspinner-f spinner-text spinner-f validatebox-text numberbox-f" data-options="min:0,max:60" style="width: 56px; height: 20px; line-height: 20px;" value="0" id="minStart"><input type="hidden" value="0"><span class="spinner-arrow" style="height: 20px;"><span class="spinner-arrow-up" style="height: 10px;"></span><span class="spinner-arrow-down" style="height: 10px;"></span></span></span>
-            分钟开始,每
-            <span class="spinner" style="width: 78px; height: 20px;"><input class="easyui-numberspinner numberspinner-f spinner-text spinner-f validatebox-text numberbox-f" data-options="min:1,max:60" style="width: 56px; height: 20px; line-height: 20px;" value="0" id="minEnd"><input type="hidden" value="1"><span class="spinner-arrow" style="height: 20px;"><span class="spinner-arrow-up" style="height: 10px;"></span><span class="spinner-arrow-down" style="height: 10px;"></span></span></span>
-            
-            分钟执行一次</li>
-          <li>
-            <input type="radio" name="rMin" value="c">
-            指定
-            <div id="minPanel"><input type="checkbox" value="1" name="minchk"><span>1</span><input type="checkbox" value="2" name="minchk"><span>2</span><input type="checkbox" value="3" name="minchk"><span>3</span><input type="checkbox" value="4" name="minchk"><span>4</span><input type="checkbox" value="5" name="minchk"><span>5</span><input type="checkbox" value="6" name="minchk"><span>6</span><input type="checkbox" value="7" name="minchk"><span>7</span><input type="checkbox" value="8" name="minchk"><span>8</span><input type="checkbox" value="9" name="minchk"><span>9</span><input type="checkbox" value="10" name="minchk"><span>10</span><br><input type="checkbox" value="11" name="minchk"><span>11</span><input type="checkbox" value="12" name="minchk"><span>12</span><input type="checkbox" value="13" name="minchk"><span>13</span><input type="checkbox" value="14" name="minchk"><span>14</span><input type="checkbox" value="15" name="minchk"><span>15</span><input type="checkbox" value="16" name="minchk"><span>16</span><input type="checkbox" value="17" name="minchk"><span>17</span><input type="checkbox" value="18" name="minchk"><span>18</span><input type="checkbox" value="19" name="minchk"><span>19</span><input type="checkbox" value="20" name="minchk"><span>20</span><br><input type="checkbox" value="21" name="minchk"><span>21</span><input type="checkbox" value="22" name="minchk"><span>22</span><input type="checkbox" value="23" name="minchk"><span>23</span><input type="checkbox" value="24" name="minchk"><span>24</span><input type="checkbox" value="25" name="minchk"><span>25</span><input type="checkbox" value="26" name="minchk"><span>26</span><input type="checkbox" value="27" name="minchk"><span>27</span><input type="checkbox" value="28" name="minchk"><span>28</span><input type="checkbox" value="29" name="minchk"><span>29</span><input type="checkbox" value="30" name="minchk"><span>30</span><br><input type="checkbox" value="31" name="minchk"><span>31</span><input type="checkbox" value="32" name="minchk"><span>32</span><input type="checkbox" value="33" name="minchk"><span>33</span><input type="checkbox" value="34" name="minchk"><span>34</span><input type="checkbox" value="35" name="minchk"><span>35</span><input type="checkbox" value="36" name="minchk"><span>36</span><input type="checkbox" value="37" name="minchk"><span>37</span><input type="checkbox" value="38" name="minchk"><span>38</span><input type="checkbox" value="39" name="minchk"><span>39</span><input type="checkbox" value="40" name="minchk"><span>40</span><br><input type="checkbox" value="41" name="minchk"><span>41</span><input type="checkbox" value="42" name="minchk"><span>42</span><input type="checkbox" value="43" name="minchk"><span>43</span><input type="checkbox" value="44" name="minchk"><span>44</span><input type="checkbox" value="45" name="minchk"><span>45</span><input type="checkbox" value="46" name="minchk"><span>46</span><input type="checkbox" value="47" name="minchk"><span>47</span><input type="checkbox" value="48" name="minchk"><span>48</span><input type="checkbox" value="49" name="minchk"><span>49</span><input type="checkbox" value="50" name="minchk"><span>50</span><br><input type="checkbox" value="51" name="minchk"><span>51</span><input type="checkbox" value="52" name="minchk"><span>52</span><input type="checkbox" value="53" name="minchk"><span>53</span><input type="checkbox" value="54" name="minchk"><span>54</span><input type="checkbox" value="55" name="minchk"><span>55</span><input type="checkbox" value="56" name="minchk"><span>56</span><input type="checkbox" value="57" name="minchk"><span>57</span><input type="checkbox" value="58" name="minchk"><span>58</span><input type="checkbox" value="59" name="minchk"><span>59</span><input type="checkbox" value="0" name="minchk"><span>0</span></div>
-          </li>
-        </ul>
-      </div></div>
-      <div class="panel" style="display: none;"><div title="" style="padding:10px" class="panel-body panel-body-noheader panel-body-noborder" id="">
-        <ul>
-          <li>
-            <input type="radio" name="rHour" id="hourId" checked="checked" value="*">
-            每小时
-          </li><li>
-            <input type="radio" name="rHour" id="hourId2" value="c">
-            指定
-            <div id="hourPanel">AM:<input type="checkbox" value="1" name="hourchk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="hourchk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="hourchk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="hourchk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="hourchk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="hourchk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="hourchk" disabled="disabled"><span>7</span><input type="checkbox" value="8" name="hourchk" disabled="disabled"><span>8</span><input type="checkbox" value="9" name="hourchk" disabled="disabled"><span>9</span><input type="checkbox" value="10" name="hourchk" disabled="disabled"><span>10</span><input type="checkbox" value="11" name="hourchk" disabled="disabled"><span>11</span><input type="checkbox" value="12" name="hourchk" disabled="disabled"><span>12</span><br>PM:<input type="checkbox" value="13" name="hourchk" disabled="disabled"><span>13</span><input type="checkbox" value="14" name="hourchk" disabled="disabled"><span>14</span><input type="checkbox" value="15" name="hourchk" disabled="disabled"><span>15</span><input type="checkbox" value="16" name="hourchk" disabled="disabled"><span>16</span><input type="checkbox" value="17" name="hourchk" disabled="disabled"><span>17</span><input type="checkbox" value="18" name="hourchk" disabled="disabled"><span>18</span><input type="checkbox" value="19" name="hourchk" disabled="disabled"><span>19</span><input type="checkbox" value="20" name="hourchk" disabled="disabled"><span>20</span><input type="checkbox" value="21" name="hourchk" disabled="disabled"><span>21</span><input type="checkbox" value="22" name="hourchk" disabled="disabled"><span>22</span><input type="checkbox" value="23" name="hourchk" disabled="disabled"><span>23</span><input type="checkbox" value="0" name="hourchk" disabled="disabled"><span>0</span></div>
-          </li>
-        </ul>
-      </div></div>
-      <div class="panel" style="display: none;"><div title="" style="padding:10px" class="panel-body panel-body-noheader panel-body-noborder" id="">
-        <ul>
-          <li>
-            <input type="radio" name="rDay" id="dayId" checked="checked" value="*">
-            每日
-          </li><li>
-            <input type="radio" name="rDay" id="dayId2" value="c">
-            指定
-            <div id="dayPanel"><input type="checkbox" value="1" name="daychk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="daychk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="daychk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="daychk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="daychk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="daychk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="daychk" disabled="disabled"><span>7</span><input type="checkbox" value="8" name="daychk" disabled="disabled"><span>8</span><input type="checkbox" value="9" name="daychk" disabled="disabled"><span>9</span><input type="checkbox" value="10" name="daychk" disabled="disabled"><span>10</span><br><input type="checkbox" value="11" name="daychk" disabled="disabled"><span>11</span><input type="checkbox" value="12" name="daychk" disabled="disabled"><span>12</span><input type="checkbox" value="13" name="daychk" disabled="disabled"><span>13</span><input type="checkbox" value="14" name="daychk" disabled="disabled"><span>14</span><input type="checkbox" value="15" name="daychk" disabled="disabled"><span>15</span><input type="checkbox" value="16" name="daychk" disabled="disabled"><span>16</span><input type="checkbox" value="17" name="daychk" disabled="disabled"><span>17</span><input type="checkbox" value="18" name="daychk" disabled="disabled"><span>18</span><input type="checkbox" value="19" name="daychk" disabled="disabled"><span>19</span><input type="checkbox" value="20" name="daychk" disabled="disabled"><span>20</span><br><input type="checkbox" value="21" name="daychk" disabled="disabled"><span>21</span><input type="checkbox" value="22" name="daychk" disabled="disabled"><span>22</span><input type="checkbox" value="23" name="daychk" disabled="disabled"><span>23</span><input type="checkbox" value="24" name="daychk" disabled="disabled"><span>24</span><input type="checkbox" value="25" name="daychk" disabled="disabled"><span>25</span><input type="checkbox" value="26" name="daychk" disabled="disabled"><span>26</span><input type="checkbox" value="27" name="daychk" disabled="disabled"><span>27</span><input type="checkbox" value="28" name="daychk" disabled="disabled"><span>28</span><input type="checkbox" value="29" name="daychk" disabled="disabled"><span>29</span><input type="checkbox" value="30" name="daychk" disabled="disabled"><span>30</span><br><input type="checkbox" value="31" name="daychk" disabled="disabled"><span>31</span></div>
-          </li>
-        </ul>
-      </div></div>
-      <div class="panel" style="display: none;"><div title="" style="padding:10px" class="panel-body panel-body-noheader panel-body-noborder" id="">
-        <ul>
-          <li>
-            <input type="radio" name="rMon" id="monId" checked="checked" value="?">
-            每月
-          </li><li>
-            <input type="radio" name="rMon" id="monId2" value="c">
-            指定
-            <div id="monPanel"><input type="checkbox" value="1" name="monchk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="monchk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="monchk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="monchk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="monchk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="monchk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="monchk" disabled="disabled"><span>7</span><input type="checkbox" value="8" name="monchk" disabled="disabled"><span>8</span><input type="checkbox" value="9" name="monchk" disabled="disabled"><span>9</span><input type="checkbox" value="10" name="monchk" disabled="disabled"><span>10</span><br><input type="checkbox" value="11" name="monchk" disabled="disabled"><span>11</span><input type="checkbox" value="12" name="monchk" disabled="disabled"><span>12</span></div>
-          </li>
-        </ul>
-      </div></div>
-      <div class="panel" style="display: none;"><div title="" style="padding:10px" class="panel-body panel-body-noheader panel-body-noborder" id="">
-        <ul>
-          <li>
-            <input type="radio" name="rWeek" id="weekId" checked="checked" value="?">
-            每星期
-          </li><li>
-            <input type="radio" name="rWeek" id="weekId2" value="c">
-            指定
-            <div id="weekPanel"><input type="checkbox" value="1" name="weekchk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="weekchk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="weekchk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="weekchk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="weekchk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="weekchk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="weekchk" disabled="disabled"><span>7</span></div>
-          </li>
-        </ul>
-      </div></div>
-    </div></div>
-  </div>
-  <div id="Cres">
-    <fieldset>
-    <legend>表达式</legend>
-    <div>
-      <table>
-        <tbody><tr>
-          <td></td>
-          <td>秒</td>
-          <td>分钟</td>
-          <td>小时</td>
-          <td>日</td>
-          <td>月</td>
-          <td>星期</td>
-        </tr>
-        <tr>
-          <td>表达式字段:</td>
-          <td><input id="exSec"></td>
-          <td><input id="exMin"></td>
-          <td><input id="exHour"></td>
-          <td><input id="exDay"></td>
-          <td><input id="exMon"></td>
-          <td><input id="exWeek"></td>
-        </tr>
-        <tr>
-          <td>Cron 表达式:</td>
-          <td colspan="5"><input id="txtCron" style="width:100%"></td>
-          <td><input type="button" value="反解析到UI " id="btnFan"></td>
-        </tr>
-        <tr>
-          <td colspan="7" style="text-align:center;color:red;font-weight:bold;"><label id="copysuccess"></label></td>
-        </tr>
-      </tbody></table>
-    </div>
-    </fieldset>
-  </div>
-  <div id="Cbuttons">
-    <input type="button" value="生成 cron表达式" id="btnGen" icon="icon-search">
-    <input type="button" value="复制Cron表达式" id="btnCopy">
-</div></div>
-<script src="./index_files/cron.js"></script>
+                        function btnFan() {
+                            //获取参数中表达式的值
+                            var txt = $("#cron").val();
+                            if (txt) {
+                                var regs = txt.split(' ');
+                                $("input[name=v_second]").val(regs[0]);
+                                $("input[name=v_min]").val(regs[1]);
+                                $("input[name=v_hour]").val(regs[2]);
+                                $("input[name=v_day]").val(regs[3]);
+                                $("input[name=v_mouth]").val(regs[4]);
+                                $("input[name=v_week]").val(regs[5]);
 
+                                initObj(regs[0], "second");
+                                initObj(regs[1], "min");
+                                initObj(regs[2], "hour");
+                                initDay(regs[3]);
+                                initMonth(regs[4]);
+                                initWeek(regs[5]);
 
+                                if (regs.length > 6) {
+                                    $("input[name=v_year]").val(regs[6]);
+                                    initYear(regs[6]);
+                                }
+                            }
+                        }
+                      
 
-<div style="position: absolute; left: 477px; top: 458px; width: 180px; height: 50px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="180" height="50" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=180&amp;height=50" wmode="transparent"></div></body></html>
+                        function initObj(strVal, strid) {
+                            var ary = null;
+                            var objRadio = $("input[name='" + strid + "'");
+                            if (strVal == "*") {
+                                objRadio.eq(0).attr("checked", "checked");
+                            } else if (strVal.split('-').length > 1) {
+                                ary = strVal.split('-');
+                                objRadio.eq(1).attr("checked", "checked");
+                                $("#" + strid + "Start_0").numberspinner('setValue', ary[0]);
+                                $("#" + strid + "End_0").numberspinner('setValue', ary[1]);
+                            } else if (strVal.split('/').length > 1) {
+                                ary = strVal.split('/');
+                                objRadio.eq(2).attr("checked", "checked");
+                                $("#" + strid + "Start_1").numberspinner('setValue', ary[0]);
+                                $("#" + strid + "End_1").numberspinner('setValue', ary[1]);
+                            } else {
+                                objRadio.eq(3).attr("checked", "checked");
+                                if (strVal != "?") {
+                                    ary = strVal.split(",");
+                                    for (var i = 0; i < ary.length; i++) {
+                                        $("." + strid + "List input[value='" + ary[i] + "']").attr("checked", "checked");
+                                    }
+                                }
+                            }
+                        }
+
+                        function initDay(strVal) {
+                            var ary = null;
+                            var objRadio = $("input[name='day'");
+                            if (strVal == "*") {
+                                objRadio.eq(0).attr("checked", "checked");
+                            } else if (strVal == "?") {
+                                objRadio.eq(1).attr("checked", "checked");
+                            } else if (strVal.split('-').length > 1) {
+                                ary = strVal.split('-');
+                                objRadio.eq(2).attr("checked", "checked");
+                                $("#dayStart_0").numberspinner('setValue', ary[0]);
+                                $("#dayEnd_0").numberspinner('setValue', ary[1]);
+                            } else if (strVal.split('/').length > 1) {
+                                ary = strVal.split('/');
+                                objRadio.eq(3).attr("checked", "checked");
+                                $("#dayStart_1").numberspinner('setValue', ary[0]);
+                                $("#dayEnd_1").numberspinner('setValue', ary[1]);
+                            } else if (strVal.split('W').length > 1) {
+                                ary = strVal.split('W');
+                                objRadio.eq(4).attr("checked", "checked");
+                                $("#dayStart_2").numberspinner('setValue', ary[0]);
+                            } else if (strVal == "L") {
+                                objRadio.eq(5).attr("checked", "checked");
+                            } else {
+                                objRadio.eq(6).attr("checked", "checked");
+                                ary = strVal.split(",");
+                                for (var i = 0; i < ary.length; i++) {
+                                    $(".dayList input[value='" + ary[i] + "']").attr("checked", "checked");
+                                }
+                            }
+                        }
+
+                        function initMonth(strVal) {
+                            var ary = null;
+                            var objRadio = $("input[name='mouth'");
+                            if (strVal == "*") {
+                                objRadio.eq(0).attr("checked", "checked");
+                            } else if (strVal == "?") {
+                                objRadio.eq(1).attr("checked", "checked");
+                            } else if (strVal.split('-').length > 1) {
+                                ary = strVal.split('-');
+                                objRadio.eq(2).attr("checked", "checked");
+                                $("#mouthStart_0").numberspinner('setValue', ary[0]);
+                                $("#mouthEnd_0").numberspinner('setValue', ary[1]);
+                            } else if (strVal.split('/').length > 1) {
+                                ary = strVal.split('/');
+                                objRadio.eq(3).attr("checked", "checked");
+                                $("#mouthStart_1").numberspinner('setValue', ary[0]);
+                                $("#mouthEnd_1").numberspinner('setValue', ary[1]);
+
+                            } else {
+                                objRadio.eq(4).attr("checked", "checked");
+
+                                ary = strVal.split(",");
+                                for (var i = 0; i < ary.length; i++) {
+                                    $(".mouthList input[value='" + ary[i] + "']").attr("checked", "checked");
+                                }
+                            }
+                        }
+
+                        function initWeek(strVal) {
+                            var ary = null;
+                            var objRadio = $("input[name='week'");
+                            if (strVal == "*") {
+                                objRadio.eq(0).attr("checked", "checked");
+                            } else if (strVal == "?") {
+                                objRadio.eq(1).attr("checked", "checked");
+                            } else if (strVal.split('/').length > 1) {
+                                ary = strVal.split('/');
+                                objRadio.eq(2).attr("checked", "checked");
+                                $("#weekStart_0").numberspinner('setValue', ary[0]);
+                                $("#weekEnd_0").numberspinner('setValue', ary[1]);
+                            } else if (strVal.split('-').length > 1) {
+                                ary = strVal.split('-');
+                                objRadio.eq(3).attr("checked", "checked");
+                                $("#weekStart_1").numberspinner('setValue', ary[0]);
+                                $("#weekEnd_1").numberspinner('setValue', ary[1]);
+                            } else if (strVal.split('L').length > 1) {
+                                ary = strVal.split('L');
+                                objRadio.eq(4).attr("checked", "checked");
+                                $("#weekStart_2").numberspinner('setValue', ary[0]);
+                            } else {
+                                objRadio.eq(5).attr("checked", "checked");
+                                ary = strVal.split(",");
+                                for (var i = 0; i < ary.length; i++) {
+                                    $(".weekList input[value='" + ary[i] + "']").attr("checked", "checked");
+                                }
+                            }
+                        }
+
+                        function initYear(strVal) {
+                            var ary = null;
+                            var objRadio = $("input[name='year'");
+                            if (strVal == "*") {
+                                objRadio.eq(1).attr("checked", "checked");
+                            } else if (strVal.split('-').length > 1) {
+                                ary = strVal.split('-');
+                                objRadio.eq(2).attr("checked", "checked");
+                                $("#yearStart_0").numberspinner('setValue', ary[0]);
+                                $("#yearEnd_0").numberspinner('setValue', ary[1]);
+                            }
+                        }
+                    </SCRIPT>
+				                     
+<DIV></DIV></DIV></DIV>
+<DIV></DIV></DIV></CENTER></BODY></HTML>

@@ -2,9 +2,9 @@
 <!-- saved from url=(0050)file:///D:/workspace_JavaEE/cron-online/index.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
 <link rel="shortcut icon" href="file:///D:/workspace_JavaEE/cron-online/favicon.ico">
-<title>ÔÚÏßCron±í´ïÊ½Éú³ÉÆ÷</title>
-<meta name="description" content="Í¨¹ıÕâ¸öÉú³ÉÆ÷,Äú¿ÉÒÔÔÚÏßÉú³ÉÈÎÎñµ÷¶È±ÈÈçQuartzµÄCron±í´ïÊ½">
-<meta name="keywords" content="cron creater,generate Cron Expression,Cron Expression online,Quartz Cron Expresssion,cronÔÚÏßÉú³É¹¤¾ß">
+<title>åœ¨çº¿Cronè¡¨è¾¾å¼ç”Ÿæˆå™¨</title>
+<meta name="description" content="é€šè¿‡è¿™ä¸ªç”Ÿæˆå™¨,æ‚¨å¯ä»¥åœ¨çº¿ç”Ÿæˆä»»åŠ¡è°ƒåº¦æ¯”å¦‚Quartzçš„Cronè¡¨è¾¾å¼">
+<meta name="keywords" content="cron creater,generate Cron Expression,Cron Expression online,Quartz Cron Expresssion,cronåœ¨çº¿ç”Ÿæˆå·¥å…·">
 <link rel="stylesheet" type="text/css" href="./index_files/style.css">
 <link rel="stylesheet" type="text/css" href="./index_files/easyui.css">
 <link rel="stylesheet" type="text/css" href="./index_files/icon.css">
@@ -39,7 +39,7 @@ function debugstr(msg) {
 	
 		var p = document.createElement('p');
 		p.innerHTML = msg;
-		$("#copysuccess").text("ÒÑ¸´ÖÆµ½¼ôÌù°å");
+		$("#copysuccess").text("å·²å¤åˆ¶åˆ°å‰ªè´´æ¿");
 		$('#d_debug').appendTo(p);
 }	
 </script>
@@ -47,23 +47,23 @@ function debugstr(msg) {
 <body onload="init()">
 <div id="cronContainer">
   <div id="tt">
-    <h3>ÔÚÏßCron±í´ïÊ½Éú³ÉÆ÷</h3>
+    <h3>åœ¨çº¿Cronè¡¨è¾¾å¼ç”Ÿæˆå™¨</h3>
   </div>
   <div id="cChoice">
-    <div class="easyui-tabs tabs-container" style="width: 700px; height: 250px;"><div class="tabs-header" style="width: 698px;"><div class="tabs-scroller-left" style="display: none;"></div><div class="tabs-scroller-right" style="display: none;"></div><div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 698px;"><ul class="tabs"><li class="tabs-selected"><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">·ÖÖÓ</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">Ğ¡Ê±</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">ÈÕ</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">ÔÂ</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">ĞÇÆÚ</span><span class="tabs-icon"></span></a></li></ul></div></div><div class="tabs-panels" style="height: 219px; width: 698px;">
+    <div class="easyui-tabs tabs-container" style="width: 700px; height: 250px;"><div class="tabs-header" style="width: 698px;"><div class="tabs-scroller-left" style="display: none;"></div><div class="tabs-scroller-right" style="display: none;"></div><div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 698px;"><ul class="tabs"><li class="tabs-selected"><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">åˆ†é’Ÿ</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">å°æ—¶</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">æ—¥</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">æœˆ</span><span class="tabs-icon"></span></a></li><li><a href="javascript:void(0)" class="tabs-inner"><span class="tabs-title">æ˜ŸæœŸ</span><span class="tabs-icon"></span></a></li></ul></div></div><div class="tabs-panels" style="height: 219px; width: 698px;">
       <div class="panel" style="display: block; width: 698px;"><div title="" style="padding: 10px; width: 678px; height: 199px;" class="panel-body panel-body-noheader panel-body-noborder">
         <ul>
           <li>
             <input type="radio" name="rMin" checked="checked" value="*">
-            ÖÜÆÚ ´Ó
+            å‘¨æœŸ ä»
             <span class="spinner" style="width: 78px; height: 20px;"><input class="easyui-numberspinner numberspinner-f spinner-text spinner-f validatebox-text numberbox-f" data-options="min:0,max:60" style="width: 56px; height: 20px; line-height: 20px;" value="0" id="minStart"><input type="hidden" value="0"><span class="spinner-arrow" style="height: 20px;"><span class="spinner-arrow-up" style="height: 10px;"></span><span class="spinner-arrow-down" style="height: 10px;"></span></span></span>
-            ·ÖÖÓ¿ªÊ¼,Ã¿
+            åˆ†é’Ÿå¼€å§‹,æ¯
             <span class="spinner" style="width: 78px; height: 20px;"><input class="easyui-numberspinner numberspinner-f spinner-text spinner-f validatebox-text numberbox-f" data-options="min:1,max:60" style="width: 56px; height: 20px; line-height: 20px;" value="0" id="minEnd"><input type="hidden" value="1"><span class="spinner-arrow" style="height: 20px;"><span class="spinner-arrow-up" style="height: 10px;"></span><span class="spinner-arrow-down" style="height: 10px;"></span></span></span>
             
-            ·ÖÖÓÖ´ĞĞÒ»´Î</li>
+            åˆ†é’Ÿæ‰§è¡Œä¸€æ¬¡</li>
           <li>
             <input type="radio" name="rMin" value="c">
-            Ö¸¶¨
+            æŒ‡å®š
             <div id="minPanel"><input type="checkbox" value="1" name="minchk"><span>1</span><input type="checkbox" value="2" name="minchk"><span>2</span><input type="checkbox" value="3" name="minchk"><span>3</span><input type="checkbox" value="4" name="minchk"><span>4</span><input type="checkbox" value="5" name="minchk"><span>5</span><input type="checkbox" value="6" name="minchk"><span>6</span><input type="checkbox" value="7" name="minchk"><span>7</span><input type="checkbox" value="8" name="minchk"><span>8</span><input type="checkbox" value="9" name="minchk"><span>9</span><input type="checkbox" value="10" name="minchk"><span>10</span><br><input type="checkbox" value="11" name="minchk"><span>11</span><input type="checkbox" value="12" name="minchk"><span>12</span><input type="checkbox" value="13" name="minchk"><span>13</span><input type="checkbox" value="14" name="minchk"><span>14</span><input type="checkbox" value="15" name="minchk"><span>15</span><input type="checkbox" value="16" name="minchk"><span>16</span><input type="checkbox" value="17" name="minchk"><span>17</span><input type="checkbox" value="18" name="minchk"><span>18</span><input type="checkbox" value="19" name="minchk"><span>19</span><input type="checkbox" value="20" name="minchk"><span>20</span><br><input type="checkbox" value="21" name="minchk"><span>21</span><input type="checkbox" value="22" name="minchk"><span>22</span><input type="checkbox" value="23" name="minchk"><span>23</span><input type="checkbox" value="24" name="minchk"><span>24</span><input type="checkbox" value="25" name="minchk"><span>25</span><input type="checkbox" value="26" name="minchk"><span>26</span><input type="checkbox" value="27" name="minchk"><span>27</span><input type="checkbox" value="28" name="minchk"><span>28</span><input type="checkbox" value="29" name="minchk"><span>29</span><input type="checkbox" value="30" name="minchk"><span>30</span><br><input type="checkbox" value="31" name="minchk"><span>31</span><input type="checkbox" value="32" name="minchk"><span>32</span><input type="checkbox" value="33" name="minchk"><span>33</span><input type="checkbox" value="34" name="minchk"><span>34</span><input type="checkbox" value="35" name="minchk"><span>35</span><input type="checkbox" value="36" name="minchk"><span>36</span><input type="checkbox" value="37" name="minchk"><span>37</span><input type="checkbox" value="38" name="minchk"><span>38</span><input type="checkbox" value="39" name="minchk"><span>39</span><input type="checkbox" value="40" name="minchk"><span>40</span><br><input type="checkbox" value="41" name="minchk"><span>41</span><input type="checkbox" value="42" name="minchk"><span>42</span><input type="checkbox" value="43" name="minchk"><span>43</span><input type="checkbox" value="44" name="minchk"><span>44</span><input type="checkbox" value="45" name="minchk"><span>45</span><input type="checkbox" value="46" name="minchk"><span>46</span><input type="checkbox" value="47" name="minchk"><span>47</span><input type="checkbox" value="48" name="minchk"><span>48</span><input type="checkbox" value="49" name="minchk"><span>49</span><input type="checkbox" value="50" name="minchk"><span>50</span><br><input type="checkbox" value="51" name="minchk"><span>51</span><input type="checkbox" value="52" name="minchk"><span>52</span><input type="checkbox" value="53" name="minchk"><span>53</span><input type="checkbox" value="54" name="minchk"><span>54</span><input type="checkbox" value="55" name="minchk"><span>55</span><input type="checkbox" value="56" name="minchk"><span>56</span><input type="checkbox" value="57" name="minchk"><span>57</span><input type="checkbox" value="58" name="minchk"><span>58</span><input type="checkbox" value="59" name="minchk"><span>59</span><input type="checkbox" value="0" name="minchk"><span>0</span></div>
           </li>
         </ul>
@@ -72,10 +72,10 @@ function debugstr(msg) {
         <ul>
           <li>
             <input type="radio" name="rHour" id="hourId" checked="checked" value="*">
-            Ã¿Ğ¡Ê±
+            æ¯å°æ—¶
           </li><li>
             <input type="radio" name="rHour" id="hourId2" value="c">
-            Ö¸¶¨
+            æŒ‡å®š
             <div id="hourPanel">AM:<input type="checkbox" value="1" name="hourchk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="hourchk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="hourchk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="hourchk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="hourchk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="hourchk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="hourchk" disabled="disabled"><span>7</span><input type="checkbox" value="8" name="hourchk" disabled="disabled"><span>8</span><input type="checkbox" value="9" name="hourchk" disabled="disabled"><span>9</span><input type="checkbox" value="10" name="hourchk" disabled="disabled"><span>10</span><input type="checkbox" value="11" name="hourchk" disabled="disabled"><span>11</span><input type="checkbox" value="12" name="hourchk" disabled="disabled"><span>12</span><br>PM:<input type="checkbox" value="13" name="hourchk" disabled="disabled"><span>13</span><input type="checkbox" value="14" name="hourchk" disabled="disabled"><span>14</span><input type="checkbox" value="15" name="hourchk" disabled="disabled"><span>15</span><input type="checkbox" value="16" name="hourchk" disabled="disabled"><span>16</span><input type="checkbox" value="17" name="hourchk" disabled="disabled"><span>17</span><input type="checkbox" value="18" name="hourchk" disabled="disabled"><span>18</span><input type="checkbox" value="19" name="hourchk" disabled="disabled"><span>19</span><input type="checkbox" value="20" name="hourchk" disabled="disabled"><span>20</span><input type="checkbox" value="21" name="hourchk" disabled="disabled"><span>21</span><input type="checkbox" value="22" name="hourchk" disabled="disabled"><span>22</span><input type="checkbox" value="23" name="hourchk" disabled="disabled"><span>23</span><input type="checkbox" value="0" name="hourchk" disabled="disabled"><span>0</span></div>
           </li>
         </ul>
@@ -84,10 +84,10 @@ function debugstr(msg) {
         <ul>
           <li>
             <input type="radio" name="rDay" id="dayId" checked="checked" value="*">
-            Ã¿ÈÕ
+            æ¯æ—¥
           </li><li>
             <input type="radio" name="rDay" id="dayId2" value="c">
-            Ö¸¶¨
+            æŒ‡å®š
             <div id="dayPanel"><input type="checkbox" value="1" name="daychk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="daychk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="daychk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="daychk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="daychk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="daychk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="daychk" disabled="disabled"><span>7</span><input type="checkbox" value="8" name="daychk" disabled="disabled"><span>8</span><input type="checkbox" value="9" name="daychk" disabled="disabled"><span>9</span><input type="checkbox" value="10" name="daychk" disabled="disabled"><span>10</span><br><input type="checkbox" value="11" name="daychk" disabled="disabled"><span>11</span><input type="checkbox" value="12" name="daychk" disabled="disabled"><span>12</span><input type="checkbox" value="13" name="daychk" disabled="disabled"><span>13</span><input type="checkbox" value="14" name="daychk" disabled="disabled"><span>14</span><input type="checkbox" value="15" name="daychk" disabled="disabled"><span>15</span><input type="checkbox" value="16" name="daychk" disabled="disabled"><span>16</span><input type="checkbox" value="17" name="daychk" disabled="disabled"><span>17</span><input type="checkbox" value="18" name="daychk" disabled="disabled"><span>18</span><input type="checkbox" value="19" name="daychk" disabled="disabled"><span>19</span><input type="checkbox" value="20" name="daychk" disabled="disabled"><span>20</span><br><input type="checkbox" value="21" name="daychk" disabled="disabled"><span>21</span><input type="checkbox" value="22" name="daychk" disabled="disabled"><span>22</span><input type="checkbox" value="23" name="daychk" disabled="disabled"><span>23</span><input type="checkbox" value="24" name="daychk" disabled="disabled"><span>24</span><input type="checkbox" value="25" name="daychk" disabled="disabled"><span>25</span><input type="checkbox" value="26" name="daychk" disabled="disabled"><span>26</span><input type="checkbox" value="27" name="daychk" disabled="disabled"><span>27</span><input type="checkbox" value="28" name="daychk" disabled="disabled"><span>28</span><input type="checkbox" value="29" name="daychk" disabled="disabled"><span>29</span><input type="checkbox" value="30" name="daychk" disabled="disabled"><span>30</span><br><input type="checkbox" value="31" name="daychk" disabled="disabled"><span>31</span></div>
           </li>
         </ul>
@@ -96,10 +96,10 @@ function debugstr(msg) {
         <ul>
           <li>
             <input type="radio" name="rMon" id="monId" checked="checked" value="?">
-            Ã¿ÔÂ
+            æ¯æœˆ
           </li><li>
             <input type="radio" name="rMon" id="monId2" value="c">
-            Ö¸¶¨
+            æŒ‡å®š
             <div id="monPanel"><input type="checkbox" value="1" name="monchk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="monchk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="monchk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="monchk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="monchk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="monchk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="monchk" disabled="disabled"><span>7</span><input type="checkbox" value="8" name="monchk" disabled="disabled"><span>8</span><input type="checkbox" value="9" name="monchk" disabled="disabled"><span>9</span><input type="checkbox" value="10" name="monchk" disabled="disabled"><span>10</span><br><input type="checkbox" value="11" name="monchk" disabled="disabled"><span>11</span><input type="checkbox" value="12" name="monchk" disabled="disabled"><span>12</span></div>
           </li>
         </ul>
@@ -108,10 +108,10 @@ function debugstr(msg) {
         <ul>
           <li>
             <input type="radio" name="rWeek" id="weekId" checked="checked" value="?">
-            Ã¿ĞÇÆÚ
+            æ¯æ˜ŸæœŸ
           </li><li>
             <input type="radio" name="rWeek" id="weekId2" value="c">
-            Ö¸¶¨
+            æŒ‡å®š
             <div id="weekPanel"><input type="checkbox" value="1" name="weekchk" disabled="disabled"><span>1</span><input type="checkbox" value="2" name="weekchk" disabled="disabled"><span>2</span><input type="checkbox" value="3" name="weekchk" disabled="disabled"><span>3</span><input type="checkbox" value="4" name="weekchk" disabled="disabled"><span>4</span><input type="checkbox" value="5" name="weekchk" disabled="disabled"><span>5</span><input type="checkbox" value="6" name="weekchk" disabled="disabled"><span>6</span><input type="checkbox" value="7" name="weekchk" disabled="disabled"><span>7</span></div>
           </li>
         </ul>
@@ -120,20 +120,20 @@ function debugstr(msg) {
   </div>
   <div id="Cres">
     <fieldset>
-    <legend>±í´ïÊ½</legend>
+    <legend>è¡¨è¾¾å¼</legend>
     <div>
       <table>
         <tbody><tr>
           <td></td>
-          <td>Ãë</td>
-          <td>·ÖÖÓ</td>
-          <td>Ğ¡Ê±</td>
-          <td>ÈÕ</td>
-          <td>ÔÂ</td>
-          <td>ĞÇÆÚ</td>
+          <td>ç§’</td>
+          <td>åˆ†é’Ÿ</td>
+          <td>å°æ—¶</td>
+          <td>æ—¥</td>
+          <td>æœˆ</td>
+          <td>æ˜ŸæœŸ</td>
         </tr>
         <tr>
-          <td>±í´ïÊ½×Ö¶Î:</td>
+          <td>è¡¨è¾¾å¼å­—æ®µ:</td>
           <td><input id="exSec"></td>
           <td><input id="exMin"></td>
           <td><input id="exHour"></td>
@@ -142,9 +142,9 @@ function debugstr(msg) {
           <td><input id="exWeek"></td>
         </tr>
         <tr>
-          <td>Cron ±í´ïÊ½:</td>
+          <td>Cron è¡¨è¾¾å¼:</td>
           <td colspan="5"><input id="txtCron" style="width:100%"></td>
-          <td><input type="button" value="·´½âÎöµ½UI " id="btnFan"></td>
+          <td><input type="button" value="åè§£æåˆ°UI " id="btnFan"></td>
         </tr>
         <tr>
           <td colspan="7" style="text-align:center;color:red;font-weight:bold;"><label id="copysuccess"></label></td>
@@ -154,8 +154,8 @@ function debugstr(msg) {
     </fieldset>
   </div>
   <div id="Cbuttons">
-    <input type="button" value="Éú³É cron±í´ïÊ½" id="btnGen" icon="icon-search">
-    <input type="button" value="¸´ÖÆCron±í´ïÊ½" id="btnCopy">
+    <input type="button" value="ç”Ÿæˆ cronè¡¨è¾¾å¼" id="btnGen" icon="icon-search">
+    <input type="button" value="å¤åˆ¶Cronè¡¨è¾¾å¼" id="btnCopy">
 </div></div>
 <script src="./index_files/cron.js"></script>
 

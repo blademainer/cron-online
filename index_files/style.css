@@ -1,0 +1,77 @@
+#cronContainer{
+width:700px;
+margin:auto;
+margin-top:40px;
+}
+span {
+display:-moz-inline-box;
+display:inline-block;
+}
+
+#cChoice{
+}
+
+#btnFan{
+	width:120px;
+	height:30px;
+}
+
+#cronNav{
+	background:url("http://www.becron.com/imgs/bai-Index2_03.gif");
+	height:34px;
+	margin-left:0px;
+	position:absolute;top:0;width:100%;left:0px
+}
+#cronNav a {
+font-size: 13px;
+text-decoration: none;
+color: black;
+margin-left:15px;
+margin-top:10px;
+font-weight: normal;
+
+text-align:center
+}
+#tt{
+	
+}
+#usefulDiv{
+	font-size:13px;
+}
+#Cres fieldset{
+	width:678px;
+	border:1px #95B8E7 solid;
+	font-size:13px;
+}
+
+#Cres input{
+ width:80px;
+}
+
+#Cbuttons{
+	width:100%;
+	border:1px #95B8E7 solid;
+	margin-top:10px;
+	text-align:center;
+}
+#btnGen,#btnCopy{
+	height:50px;
+	width:180px;
+}
+
+#testContainer{
+	width:400px;
+	margin: 40px auto;
+}
+.fixed{float:clear;}
+#testText{
+width:270px;
+}
+#textTxtArea{
+	width:100%
+}
+#minPanel  span{width:20px;}
+#hourPanel span{width:20px;}
+#dayPanel span{width:20px;}
+#monPanel span{width:20px;}
+#weekPanel span{width:20px;}
